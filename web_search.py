@@ -1,5 +1,9 @@
+import os
+
 import httpx
 from mcp.server import FastMCP
+
+api_key = os.getenv("API_KEY")
 
 # # 初始化 FastMCP 服务器
 app = FastMCP('web-search')
@@ -19,7 +23,7 @@ async def web_search(query: str) -> str:
     async with httpx.AsyncClient() as client:
         response = await client.post(
             'https://open.bigmodel.cn/api/paas/v4/tools',
-            headers={'Authorization': '换成你自己的API KEY'},
+            headers={'Authorization': api_key},
             json={
                 'tool': 'web-search-pro',
                 'messages': [

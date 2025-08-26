@@ -1,0 +1,6 @@
+services:
+  mcp-server:
+    build: .
+    ports:
+      - 6278:6278
+    env_file: .env
