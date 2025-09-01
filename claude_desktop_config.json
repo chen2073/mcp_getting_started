@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "mcp_getting_started": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/Users/haochen/mcp_getting_started",
+        "run",
+        "my_todos.py"
+      ]
+    }
+  }
+}
